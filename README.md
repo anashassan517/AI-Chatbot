@@ -19,16 +19,18 @@ Before you begin, ensure you have the following installed:
 - [Node.js](https://nodejs.org/)
 - [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 
+
+## Live Demo
+https://anas-chatbot.vercel.app/
+
 ## Installation
 
 Clone the repository and install the dependencies:
+
+Setup .env.local and add OPENAI_API_KEY='***...'
 
 ```bash
 git clone https://github.com/anashassan517/AI-Chatbot.git
 cd AI-Chatbot
 npm install
 
-Setup .env.local and add OPENAI_API_KEY='***...'
-
-## Live Demo
-https://anas-chatbot.vercel.app/
