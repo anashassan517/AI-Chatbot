@@ -7,11 +7,6 @@ A simple chatbot built with Next.js and powered by the OpenAI API.
 - [About](#about)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
-- [Configuration](#configuration)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgments](#acknowledgments)
 
 ## About
 
@@ -34,3 +29,6 @@ cd AI-Chatbot
 npm install
 
 Setup .env.local and add OPENAI_API_KEY='***...'
+
+## Live Demo
+https://anas-chatbot.vercel.app/
