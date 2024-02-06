@@ -5,7 +5,7 @@ const MessagesList = () => {
   const { messages, isLoadingAnswer } = useMessages();
 
   return (
-    <div className="max-w-3xl mx-auto pt-8">
+    <div className="pb-64 relative overflow-scroll max-w-3xl mx-auto pt-8 my-auto z-0">
       {messages?.map((message, i) => {
         const isUser = message.role === 'user';
         if (message.role === 'system') return null;
@@ -24,11 +24,19 @@ const MessagesList = () => {
                 alt="avatar"
               />
             )} */}
-            <div
+            {/* <div
               style={{ maxWidth: 'calc(100% - 45px)' }}
               className={`group relative px-3 py-2 rounded-lg ${
                 isUser
                   ? 'mr-2 bg-gradient-to-br from-primary-700 to-primary-600 text-white'
+                  : 'ml-2 bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-200'
+              }`}
+            > */}
+               <div
+              style={{ maxWidth: 'calc(100% - 45px)' }}
+              className={`group relative px-3 py-2 ${
+                isUser
+                  ? 'mr-2  text-white bg-blue-600'
                   : 'ml-2 bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-200'
               }`}
             >

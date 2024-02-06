@@ -14,7 +14,7 @@ const MessageForm = () => {
 
   return (
     <form
-      className="relative mx-auto max-w-3xl rounded-t-xl"
+      className="relative mx-auto max-w-3xl rounded-t-xl z-10"
       onSubmit={handleSubmit}
     >
       <div className=" supports-backdrop-blur:bg-white/95 h-[130px] rounded-t-xl border-t border-l border-r border-gray-200 border-gray-500/10 bg-white p-5 backdrop-blur dark:border-gray-50/[0.06]">
