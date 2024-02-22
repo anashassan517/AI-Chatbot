@@ -14,11 +14,11 @@ const MessagesList = () => {
             id={`message-${i}`}
             className={`flex mb-4 fade-up ${isUser ? 'justify-end' : 'justify-start'} ${i === 1 ? 'max-w-md' : ''
               }`}
-            key={message.content}
+            key={message.parts}
           >
             {!isUser && (
               <img
-                src="../../img/bot.jpg"
+                src="../../img/Bot.jpg"
                 className="w-11 h-11 rounded-full"
                 alt="avatar"
               />
@@ -37,7 +37,7 @@ const MessagesList = () => {
                 : 'ml-2 bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-200'
                 }`}
             > */}
-              {message.content?.trim()}
+              {message.parts?.trim()}
             </div>
             {isUser && (
               <img

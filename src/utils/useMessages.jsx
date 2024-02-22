@@ -76,12 +76,12 @@ export function MessagesProvider({ children }) {
   useEffect(() => {
     const initializeChat = () => {
       const systemMessage = {
-        role: 'system',
-        content: 'I am XGen Technology personalized bot, a large language model trained by XGen Technology.',
+        role: "system",
+        parts: "Hi, I am XGen Technology Assistant. I am here to assist you to provide accurate and helpful information!",
       };
       const welcomeMessage = {
         role: 'model',
-        content: 'Hi, I am XGen Technology Assistant. I am here to assist you to provide accurate and helpful information on any topic!',
+        parts: 'Hi, I am XGen Technology Assistant. I am here to assist you to provide accurate and helpful information!',
       };
       setMessages([systemMessage, welcomeMessage]);
     };
@@ -91,19 +91,19 @@ export function MessagesProvider({ children }) {
     }
   }, [messages?.length, setMessages]);
 
-  const addMessage = async (content) => {
+  const addMessage = async (parts) => {
     setIsLoadingAnswer(true);
     try {
       const newMessage = {
         role: 'user',
-        content,
+        parts,
       };
       const newMessages = [...messages, newMessage];
       setMessages(newMessages);
 
       const { data } = await sendMessage(newMessages);
       const reply = data.choices[0].message;
-      setMessages([...newMessages, { role: 'model', content: reply }]);
+      setMessages([...newMessages, { role: 'model', parts: reply }]);
     } catch (error) {
       addToast({ title: 'An error occurred', type: 'error' });
     } finally {
