@@ -72,7 +72,7 @@ const Layout = ({
               <Text>About Us</Text>
             </Link>
             <Link
-              href="https://xgentechnologies.com/contact-us/"
+              href="https://xgentechnologies.com/contact/"
               display="flex"
               align="center"
               color="gray.600"
